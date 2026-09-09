@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121214; 
+    color: #e1e1e6;           
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.topo-portfolio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#btn-tema {
+    background: transparent;
+    border: 2px solid #8b5cf6;
+    border-radius: 8px;
+    color: #e1e1e6;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#btn-tema:hover {
+    transform: scale(1.05);
+}
+
+h2 {
+    color: #8b5cf6;           
+    border-bottom: 2px solid #8b5cf6;
+    padding-bottom: 5px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #8b5cf6; 
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+.descricao {
+    color: #c9d1d9;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.projeto {
+    background-color: #202024;
+    border: 1px solid #29292e;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.tecnologias {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.icone-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background-color: #202024; 
+    border: 1px solid #29292e;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icone-card i {
+    font-size: 30px;
+}
+
+.vscode i { color: #007ACC; }
+.python i { color: #4B8BBE; }
+.git i    { color: #F05032; }
+.github i { color: #FFFFFF; }
+
+.icone-card:hover { transform: translateY(-6px); }
+.vscode:hover { box-shadow: 0 0 12px rgba(0, 122, 204, 0.5); }
+.python:hover { box-shadow: 0 0 12px rgba(75, 139, 190, 0.5); }
+.git:hover    { box-shadow: 0 0 12px rgba(240, 80, 50, 0.5); }
+.github:hover { box-shadow: 0 0 12px rgba(255, 255, 255, 0.4); }
+
+.tag-tech {
+    display: inline-block;
+    background-color: #29292e;
+    color: #38bdf8; 
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid #323238;
+}
+
+.lista-contatos {
+    display: flex;
+    gap: 15px; 
+    list-style: none;
+    padding-left: 0;
+}
+
+.btn-projeto-icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: #202024;
+    color: #8b5cf6;
+    border: 1px solid #29292e;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 24px;
+    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-contato-icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    background-color: #202024;
+    color: #8b5cf6;
+    border: 1px solid #29292e;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 30px;
+    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-projeto-icone:hover,
+.btn-contato-icone:hover {
+    transform: translateY(-4px);
+    border-color: #8b5cf6;    
+}
+
+@keyframes surgirDeBaixo {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.projeto, .tecnologias {
+    animation: surgirDeBaixo 0.8s ease-out;
+}
+
+body.modo-claro {
+    background-color: #e4e4e7;
+    color: #27272a;
+}
+
+body.modo-claro h1,
+body.modo-claro h2,
+body.modo-claro h3 {
+    color: #09090b;
+}
+
+body.modo-claro p {
+    color: #3f3f46;
+}
+
+body.modo-claro .projeto,
+body.modo-claro .icone-card {
+    background-color: #f4f4f5;
+    border-color: #d4d4d8;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body.modo-claro .tag-tech {
+    background-color: #e4e4e7;
+    color: #0284c7;
+    border-color: #cbd5e1;
+}
+
+body.modo-claro .btn-projeto-icone,
+body.modo-claro .btn-contato-icone,
+body.modo-claro #btn-tema {
+    background-color: #f4f4f5;
+    color: #8b5cf6;
+    border-color: #cbd5e1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.06);
+}
+
+body.modo-claro .github i {
+    color: #18181b;
+}
+
+body.modo-claro .github:hover {
+    box-shadow: 0 0 12px rgba(24, 24, 27, 0.2);
+}
+body.modo-claro .btn-projeto-icone i {
+    color: #18181b;
+}
+
+body.modo-claro .btn-projeto-icone:hover {
+    border-color: #18181b;
+}
+body.modo-claro .btn-contato-icone .devicon-github-original {
+    color: #18181b;
+}
+
+body.modo-claro .btn-contato-icone .devicon-linkedin-plain {
+    color: #0a66c2;
+}
+
+body.modo-claro .btn-contato-icone:hover {
+    border-color: #8b5cf6;
+}
+.btn-projeto-icone .devicon-github-original,
+.btn-contato-icone .devicon-github-original {
+    color: #ffffff;
+}
+
+.btn-contato-icone .devicon-linkedin-plain {
+    color: #0a66c2;
+}
+
+.btn-projeto-icone:hover,
+.btn-contato-icone:hover {
+    border-color: #8b5cf6;
+}
+.icone-card.vscode:hover {
+    border-color: #007acc;
+    box-shadow: 0 0 15px rgba(0, 122, 204, 0.6);
+}
+
+.icone-card.python:hover {
+    border-color: #4b8bbe;
+    box-shadow: 0 0 15px rgba(75, 139, 190, 0.6);
+}
+
+.icone-card.git:hover {
+    border-color: #f05032;
+    box-shadow: 0 0 15px rgba(240, 80, 50, 0.6);
+}
+
+.icone-card.github:hover {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.6);
+}
+
+.icone-card {
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-icone-tema {
+    background-color: #202024;
+    border: 1px solid #29292e;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8b5cf6;
+    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-icone-tema:hover {
+    transform: scale(1.08);
+    border-color: #8b5cf6;
+    box-shadow: 0 0 12px rgba(139, 92, 246, 0.4);
+}
+
+.btn-icone-tema .material-symbols-outlined {
+    font-size: 24px;
+    transition: transform 0.4s ease;
+}
+
+body.modo-claro .btn-icone-tema {
+    background-color: #f4f4f5;
+    border-color: #d4d4d8;
+    color: #8b5cf6;
+}
